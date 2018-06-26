@@ -1,4 +1,4 @@
-# Tribestream API Gateway - Custom Claims
+# OAuth 2.0 with JWT and Custom Claims
 
 This web application aims at showing how to use the Tribestream API Gateway to authenticate users.
 In this example we'll be showing how to add custom business data inside the JWT.
