@@ -11,9 +11,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     HOST="host.docker.internal"
 fi
 
-# set the default key size for public/private keys to 2048
-import http://localhost:8080/tag ../resources/default-keysize-2048.json
-
 # create the Movies oauth2 profile
 import http://localhost:8080/tag ../resources/profile-oauth2-movies.json
 
