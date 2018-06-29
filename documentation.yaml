@@ -6,4 +6,4 @@ documentation:
     name: 'Examples'
     display_name: OAuth 2.0 with JWT and Custom Claims'
     public_path: 'en/api-gateway/oauth2-jwt-custom-claims'
-    single_page: 'false'
+    single_page: 'single'
