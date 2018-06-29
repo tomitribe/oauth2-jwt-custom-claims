@@ -69,6 +69,11 @@
           <tomeeHttpPort>8181</tomeeHttpPort>
           <args>-Xmx512m -XX:PermSize=256m</args>
           <config>${project.basedir}/src/main/tomee/</config>
+          <libs>
+              <lib>org.apache.johnzon:johnzon-core:1.0.1</lib>
+              <lib>org.apache.johnzon:johnzon-jaxrs:1.0.1</lib>
+              <lib>org.apache.johnzon:johnzon-mapper:1.0.1</lib>
+          </libs>
           <synchronization>
             <updateOnlyExtensions>
               <updateOnlyExtension>.html</updateOnlyExtension>
@@ -124,7 +129,7 @@
       <groupId>org.eclipse.microprofile.jwt</groupId>
       <artifactId>microprofile-jwt-auth-api</artifactId>
       <version>${mp-jwt.version}</version>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.nimbusds</groupId>
