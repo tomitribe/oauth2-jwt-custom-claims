@@ -30,7 +30,7 @@ public class MovieClaimsSourceResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public String authenticate(final Map<String, String> payload) {
-        return "{\"audience\":[\"microprofile\",\"jwt\",\"tomee\"]}";
+        return "{\"audience\":[\"Hello\",\"world!\"]}";
     }
 
 }
