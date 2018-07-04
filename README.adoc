@@ -73,10 +73,11 @@ It should start on port 8181 so it does not clash with the Gateway
 So what you need is to open a browser and navigate to http://localhost:8181/moviefun/
 
 There are 4 accounts created with the import scripts (See step 2).
-- alex/password with create, update and delete role
-- john/password with create role
-- nick/password with delete role
-- mark/password with update role
+
+* alex/password with create, update and delete role
+* john/password with create role
+* nick/password with delete role
+* mark/password with update role
 
 As soon as you get in the application using one of these accounts, checkout the HTTP requests from the application to the remote server.
 If you are using the Chrome browser, you can open up the developer tools.
