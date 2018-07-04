@@ -1,17 +1,26 @@
-# OAuth 2.0 with JWT and Custom Claims
+:encoding: UTF-8
+:linkattrs:
+:sectlink:
+:sectanchors:
+:sectid:
+:imagesdir: media
 
-This web application aims at showing how to use the Tribestream API Gateway to authenticate users.
-In this example we'll be showing how to add custom business data inside the JWT.
+= OAuth 2.0 with JWT and Custom Claims
 
-## Requirements
+== Introduction
 
-This project is self contained or depends on external libraries available on public repositories.
-It also uses the Tribestream API Gateway docker image.
+=== Learning objectives
 
-In your laptop, you will need a Java 8 JDK installed.
-You also need Docker and Maven installed.
+* Authenticate users with the Tribestream API Gateway
+* Add business data as custom claims into the JWT
 
-## Starting the Tribestream API Gateway
+=== Prerequisites
+
+* link:https://www.docker.com/community-edition[Docker] installed and running
+* link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Oracle JDK 8] Installed and running
+* link:https://maven.apache.org/download.cgi[Apache Maven] Installed
+
+== Starting the Tribestream API Gateway
 
 In order to work, this application requires an STS (Secure Token Service) capable of generating signed JWT tokens.
 This is what the Tribestream API Gateway is about.
@@ -27,7 +36,7 @@ docker run --rm -it --name tag -e LICENSE=accept -e CASSANDRA_EMBEDDED=true -p 8
 Once the Tribestream API Gateway is up and running, you can connect to the console with the following URL
 http://localhost:8080/tag/
 
-## Build the project
+== Build the project
 
 You will need to checkout the source locally and then build the project.
 Here are the steps
@@ -37,7 +46,7 @@ git clone https://github.com/tomitribe/oauth2-jwt-custom-claims.git
 cd oauth2-jwt-custom-claims
 ```
 
-## Populating and configuring the Tribestream API Gateway
+== Populating and configuring the Tribestream API Gateway
 
 To ease configuration, this project comes with necessary configuration and scripts to load the configuration of the API Gateway.
 You can also navigate through the UI and do it yourself.
@@ -51,7 +60,7 @@ cd src/main/scripts
 
 NOTE: you need to make sure you first started the API Gateway with the previous step.
 
-## Starting the movie chat application
+== Starting the movie chat application
 
 Next step consists in starting the demo application.
 From the project root directory, run the following command.
@@ -83,7 +92,7 @@ If now you want to return actual business data, change the code to return someth
 When done, logout and login again in the application and decode the new JWT.
 You should see the updated `aud` claim.
 
-## Testing your claim source changes from the UI
+== Testing your claim source changes from the UI
 
 Go to the following page http://localhost:8080/tag/claim-source/movies-claims-source
 You will see the configuration for the claim source.
